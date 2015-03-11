@@ -15,15 +15,6 @@ h4
 h5
 h6
   font-weight normal
-  
-
-svg
-  display table
-  border-spacing 0
-  vertical-align middle
-  width 4em
-  @media (max-width: 800px)
-    width 3em
 
 .content
   max-width 80em
@@ -40,37 +31,6 @@ svg
     
     .col
       @extend .nest-3
-      &:nth-child(1n)
-        .post
-          &:nth-child(2n - 3)
-            .post-image
-              &:before
-                padding-top 90%
-          &:nth-child(4n - 3)
-            .post-image
-              &:before
-                padding-top 75%
-                
-      &:nth-child(2n)
-        .post
-          &:nth-child(3n - 2)
-            .post-image
-              &:before
-                padding-top 60%
-          &:nth-child(2n)
-            .post-image
-              &:before
-                padding-top 35%
-      &:nth-child(3n)
-        .post
-          &:nth-child(3n - 2)
-            .post-image
-              &:before
-                padding-top 150%
-          &:nth-child(5n)
-            .post-image
-              &:before
-                padding-top 75%
       
 
 .header
@@ -78,6 +38,8 @@ svg
   position sticky
   top 0
   z-index 100
+  img
+    width 4em
 
 .posts
   
@@ -96,17 +58,8 @@ svg
   @extend .nest-4
 
 .post-image
-  @extend .pad-4
-  width 100%
-  position relative
-  background-color #fafafa
-  background-size cover
-  background-position top center
-  background-repeat no-repeat
-  &:before
-    content ''
-    display block
-    padding-top 50%
+  img
+    width 100%
 
     
 @media (max-width: 800px)

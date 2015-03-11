@@ -1,0 +1,23 @@
+doctype 
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no, width=device-width")
+    block title
+    link(rel='stylesheet', href='index.css')
+    script(src="../bower_components/Stickyfill/dist/stickyfill.min.js")
+    block scripts
+
+  body
+    .header.sticky
+      .content.-header
+        .grid.align-middle.spaced.inline: .grid-items
+          .col.h-min
+            a(href="/out/")
+              img(src='images/summerhouse-logo.svg')
+          .col About
+          .col Contact
+          .col Articles
+    main
+      block content
+        
