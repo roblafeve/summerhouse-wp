@@ -1239,8 +1239,6 @@ body {
 .plx-layers {
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
 }
 .plx-layers-down {
   width: 100%;
@@ -1262,6 +1260,8 @@ body {
   border-width: 0 0 2px 2px;
 }
 .plx-layer {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   display: table;
   width: 100%;
   height: 100%;
@@ -1270,6 +1270,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .plx-layer.-fore {
   -webkit-transform: translateZ(-150px) scale(1.5);
@@ -1288,6 +1290,8 @@ body {
   background-color: #fff;
   position: relative;
   z-index: 100;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .plx-layer-content {
   display: table-cell;
