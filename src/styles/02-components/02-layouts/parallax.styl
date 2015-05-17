@@ -1,8 +1,3 @@
-
-
-*
-  box-sizing border-box
-
 html
   font 87.5%/1.4 'Helvetica Neue', Arial, sans-serif
   overflow hidden
@@ -22,6 +17,9 @@ body
 .plx-layers
   width 100%
   height 100%
+@-moz-document url-prefix()
+  .plx-layers
+    transform-style preserve-3d
   
 .plx-layers-down
   width 100%
@@ -49,7 +47,6 @@ body
   background-position center
   background-repeat no-repeat
   color white
-  transform translate3d(0,0,0)
 
   &.-fore
     transform: translateZ(-150px) scale(1.5)
