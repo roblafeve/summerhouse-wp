@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Summer House
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no, width=device-width")
+    link(rel="stylesheet", href="styles/style.css")
+    link(href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css')
+  body
+    .titlebar
+      .grid.-spaced.-align-middle
+        .col: .titlebar-logo: img(src='../assets/images/logo-shf.svg')
+        .col.-h-min
+          nav.titlebar-nav
+            ul.grid.-spaced
+              li.col Work
+              li.col Blog
+              li.col About
+              li.col Contact
+
+    .plx
+
+
+      .plx-layers
+        .plx-layer.-back(style="background-image: url('../assets/images/summerhouse-austin-dawn.jpg')")
+        .plx-layer.-fore: .plx-layer-content 
+          .content
+            h1 San Francisco
+            h4 Read post
+        .plx-layers-down
+
+
+
+      .plx-layer.-spacer: .plx-layer-content
+        
+        .content.-align-left
+          h2 Our Work
+          .content-grid
+            .grid.-wrapped.-spaced
+              - for (i = 0; i < 8; i++)
+                .col
+                  a.post(href='')
+                    .post-image
+                    .post-content
+                      .post-title: h3 Work Title Goes Here
+                      .post-excerpt  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo maxime quam quia totam ratione voluptates adipisci quae sit impedit iure asperiores, at. Dolorum impedit blanditiis, rerum vitae ullam atque sint?
+
+      .plx-layers
+        .plx-layer.-back(style="background-image: url('../assets/images/summerhouse-skateboard.jpg')")
+        .plx-layer.-fore: .plx-layer-content 
+          h1 Skate Park
+
+      .plx-layer.-spacer: .plx-layer-content
+        .content.-align-left
+          .grid.-fixed
+            .col
+            .col.nest-3
+              h2 The deal with the dude skateboarding
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolorem quasi, voluptas magnam ut alias consequuntur! Vero quis mollitia deserunt, ipsum obcaecati at, cupiditate fugit expedita praesentium voluptate nam, itaque.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sequi quae ullam. Cupiditate assumenda, sint expedita, alias minima excepturi numquam veniam laboriosam, vero commodi voluptatibus quis aut sed labore repudiandae!
+
+      .plx-layers
+        .plx-layer.-back(style="background-image: url('../assets/images/summerhouse-adidas-guy.jpg')")
+        .plx-layer.-fore: .plx-layer-content 
+          h1 Adidas
+
+      .plx-layer.-spacer: .plx-layer-content
+        .content.-align-left
+          .grid.-fixed
+            .col.nest-3
+              h2 That time we worked for Adidas
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolorem quasi, voluptas magnam ut alias consequuntur! Vero quis mollitia deserunt, ipsum obcaecati at, cupiditate fugit expedita praesentium voluptate nam, itaque.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sequi quae ullam. Cupiditate assumenda, sint expedita, alias minima excepturi numquam veniam laboriosam, vero commodi voluptatibus quis aut sed labore repudiandae!
+            .col
+
+      .plx-layers
+        .plx-layer.-back(style="background-image: url('../assets/images/summerhouse-lake.jpg')")
+        .plx-layer.-fore: .plx-layer-content
+          .content.-align-center.nest-3
+            h1 About Summer House
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora aperiam, architecto, eius sit voluptatibus minus asperiores similique incidunt, expedita harum! Veniam, at praesentium! Consequatur neque laborum magnam ipsam alias.
+
+      .plx-layer.-spacer: .plx-layer-content
+        .content.-align-center.nest-3
+          h1 Contact
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolorem quasi, voluptas magnam ut alias consequuntur! Vero quis mollitia deserunt, ipsum obcaecati at, cupiditate fugit expedita praesentium voluptate nam, itaque.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sequi quae ullam. Cupiditate assumenda, sint expedita, alias minima excepturi numquam veniam laboriosam, vero commodi voluptatibus quis aut sed labore repudiandae!
+
+            
