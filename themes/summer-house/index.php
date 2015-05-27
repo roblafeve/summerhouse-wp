@@ -1,1 +1,2 @@
-<h1>Index Page</h1>
+<h1>blog</h1>
+<?php sh_posts(); ?>
