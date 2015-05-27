@@ -9,15 +9,22 @@ html(lang='en')
     block scripts
 
   body
-    .header.sticky
-      .content.-header
-        .grid.align-middle.spaced.inline: .grid-items
-          .col.h-min
-            a(href="/out/")
-              img(src='images/summerhouse-logo.svg')
-          .col About
-          .col Contact
-          .col Articles
+
+    //- Header
+    .section.-header.sticky
+      .section-content
+
+        nav
+          ul.grid.align-middle.spaced.inline: .grid-items
+            li.col
+              a(href="/out/")
+                img.logo.-small(src='images/logo-shf.svg')
+            li.col About
+            li.col Contact
+            li.col
+              a(href='/out/articles.html') Articles
+    
+    //- Main Content
     main
       block content
         

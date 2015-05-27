@@ -7,15 +7,15 @@ block scripts
   script.
     document.addEventListener('DOMContentLoaded', function () {
 
-      var cols = document.querySelectorAll('.content.-body .col');
+      var cols = document.querySelectorAll('.articles.-multiColumn .col');
       var colsLength = cols.length;
-      var posts = document.querySelectorAll('.posts .post');
-      var postsLength = posts.length;
+      var articles = document.querySelectorAll('.articles.-singleColumn .article');
+      var articlesLength = articles.length;
       var c = 0;
-      for (var i = 0; i < postsLength; i++) {
-        post = posts[i];  
-        post = post.cloneNode(true);
-        cols[c].appendChild(post);
+      for (var i = 0; i < articlesLength; i++) {
+        article = articles[i];  
+        article = article.cloneNode(true);
+        cols[c].appendChild(article);
         c++;
         if(c >= colsLength) {
           c = 0;
@@ -30,18 +30,20 @@ block scripts
     });
 
 block content
-  .posts.-hidden
-    - for (var x = 0; x < 20; x++)
-      .post(href="#" class= "-#{x}")
-        .post-image: img(src="images/post-#{x}.jpg")
-        .post-title
-          h3 Lorem ipsum dolor sit amet
-          p: small: em April #{25 - x}, 2015
-          - var rand = Math.floor((Math.random() * 2) + 1)
-          - for(var y = 0; y < rand; y++ )
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis sed quo voluptatem fugit ducimus, ex, molestias nesciunt debitis beatae. Nesciunt magnam, perspiciatis ipsam quibusdam expedita laborum necessitatibus rerum.
+  .articles.-singleColumn
+    .section: .section-content
+      - for (var x = 0; x < 20; x++)
+        .article(href="#" class= "-#{x}")
+          .article-image: img(src="images/post-#{x}.jpg")
+          .article-description
+            h3 Lorem ipsum dolor sit amet
+            p: small: em April #{25 - x}, 2015
+            - var rand = Math.floor((Math.random() * 2) + 1)
+            - for(var y = 0; y < rand; y++ )
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis sed quo voluptatem fugit ducimus, ex, molestias nesciunt debitis beatae. Nesciunt magnam, perspiciatis ipsam quibusdam expedita laborum necessitatibus rerum.
 
-  .content.-body
+  .articles.-multiColumn
+    .section: .section-content
       .grid.spaced.align-top: .grid-items
         .col
         .col

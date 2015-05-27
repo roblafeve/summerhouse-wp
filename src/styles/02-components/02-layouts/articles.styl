@@ -1,0 +1,15 @@
+.articles
+  
+  &.-singleColumn
+    @media (min-width: 800px)
+      display none
+      
+    .article
+      @extend .v-space-none
+
+    .article-description
+      @extend .pad-3
+
+  &.-multiColumn
+    @media (max-width: 800px)
+      display none

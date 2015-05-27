@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "stylus-watch": "stylus -w -c src/ -o out -u autoprefixer-stylus",
+    "stylus-watch": "stylus -w -c src/styles/index.styl -o out -u autoprefixer-stylus",
     "jade-watch": "jade -w src/ -o out/",
     "browser-sync": "browser-sync start --server --no-notify --startPath out/ --files 'out/*.css, out/*.html'",
     "start": "npm run stylus-watch & npm run jade-watch & npm run browser-sync"

@@ -1,0 +1,30 @@
+.section
+  
+  &.-header
+    background-color rgba(#FFF, 0.95)
+    position sticky
+    top 0
+    z-index 100
+  
+.section-content
+  @extend .pad-2, .nest-3
+  max-width 80em
+  margin-right: auto
+  margin-left: auto
+  
+  .-header &
+    @extend .pad-h-2, .pad-v-3, .nest-3     
+    
+  .home-features &
+    @extend .nest-2
+
+  .articles.-singleColumn &
+    @extend .v-space-none
+    padding: 0
+    
+  .articles.-multiColumn &
+    @extend .nest-2
+    .col
+      @extend .nest-2
+      
+  

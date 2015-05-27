@@ -1,8 +1,47 @@
 extends main.jade
 
 block title
-  title Articles
+  title Summer House Films
+
 
 block content
-  section
-    h1 What we do
+
+  .home
+
+    .home-intro
+      .grid.align-middle.v-max: .grid-items: .col
+        .home-intro-mark
+          h1: .-huge Summer House Films
+
+    .home-about
+      .section: .section-content
+        h2
+          .-big heavy air. 
+          em “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sint rerum, itaque at autem alias dolor illum, cumque excepturi fugit cum hic possimus, voluptas praesentium. Soluta temporibus hic perspiciatis ipsum.”
+        .video
+          <iframe src="https://player.vimeo.com/video/124044839" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/124044839">Heavy Air</a> from <a href="https://vimeo.com/summerhousefilms">Summer House Films</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    .home-features
+      .section: .section-content
+        .grid: .grid-items
+          .col
+            h2 Recent Articles
+          .home-features-link.col.h-min
+            a(href='articles.html') Read all
+        .grid.spaced.align-top: .grid-items
+          - for (var x = 1; x < 4; x++)
+            .col
+              .article(href="#" class= "-#{x}")
+                .article-image: img(src="images/post-#{x}.jpg")
+                .article-description
+                  h3 Lorem ipsum dolor sit amet
+                  p: small: em April #{25 - x}, 2015
+                  - var rand = Math.floor((Math.random() * 2) + 1)
+                  - for(var y = 0; y < rand; y++ )
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis sed quo voluptatem fugit ducimus, ex, molestias nesciunt debitis beatae. Nesciunt magnam, perspiciatis ipsam quibusdam expedita laborum necessitatibus rerum.
+
+
+    .home-contact
+      .section: .section-content
+        h2 Let's work
+        p We're always interested in talking about potential work.
+          

@@ -1,0 +1,37 @@
+heading-scale( ratio = 1.2, shift = 0 )
+
+  for i in (1..6)
+    h{i},
+    .h{i}
+      power = 6 - (i - shift)
+      size  = (ratio**power)em
+      font-size: size
+
+
+heading-scale( 1.4, -1.8)
+@media max-small
+  heading-scale( 1.2, -2)
+
+.-huge
+  font-size 4em
+  line-height 1.1
+
+.-big
+  font-size 3em
+  line-height 1.1
+
+h1
+.h1
+h2
+.h2
+h3
+.h3
+h4
+.h4
+h5
+.h5
+h6
+.h6
+  font-weight 100
+  line-height 1.3
+  letter-spacing 0.04em
