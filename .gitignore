@@ -1,2 +1,4 @@
 themes/twenty*
 uploads/*
+bower_components/*
+node_modules/*

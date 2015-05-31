@@ -1,0 +1,18 @@
+.content
+  display inline-block
+  @extend .pad-1
+  @extend .nest-2
+  max-width 84em
+  width 100%
+
+.content-grid
+  @extend .nest-3
+  text-align left
+  > .grid > .col
+    width (100/4)%
+    @media (max-width: 1024px)
+      width (100/3)%
+    @media (max-width: 800px)
+      width (100/2)%
+    @media (max-width: 640px)
+      width (100/1)%

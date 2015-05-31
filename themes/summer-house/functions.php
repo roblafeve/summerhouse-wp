@@ -1,7 +1,13 @@
 <?php
 
-// define('WP_DEBUG', true);
-// define('WP_DEBUG_DISPLAY', true);
+// Styles
+
+function sh_scripts() {
+  wp_enqueue_style( 'sh_styles', get_template_directory_uri() . '/styles/styles.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'sh_scripts' );
+
 
 // Create Featured Categories
 
@@ -118,12 +124,12 @@ function sh_posts($type = null) {
 
 if ( function_exists( 'add_theme_support' ) ) { 
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 400, 400 ); // default Post Thumbnail dimensions (cropped)
-
-  // additional image sizes
-  // delete the next line if you do not need additional image sizes
-  add_image_size( 'large', 1500, 9999 ); //300 pixels wide (and unlimited height)
+  add_image_size( 'small', 500, 500 );
+  add_image_size( 'medium', 960, 960 );
+  add_image_size( 'large', 1500, 1500 );
 }
+
+add_filter( 'jpeg_quality', create_function( '', 'return 90;' ) );
 
 
 ?>

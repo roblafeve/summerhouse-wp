@@ -1,0 +1,67 @@
+html
+  font 87.5%/1.4 'Helvetica Neue', Arial, sans-serif
+  overflow hidden
+  height 100%
+  
+body
+  margin 0
+  height 100%
+
+.plx
+  height 100%
+  width 100%
+  overflow-x hidden
+  overflow-y scroll
+  perspective 300px
+
+.plx-layers
+  width 100%
+  height 100%
+@-moz-document url-prefix()
+  .plx-layers
+    transform-style preserve-3d
+  
+.plx-layers-down
+  width 100%
+  height 5em
+  position absolute
+  bottom 0
+  text-align center
+  &:after
+    content ''
+    display inline-block
+    width 2.5em
+    height 2.5em
+    transform rotate(-45deg)
+    border-style solid
+    border-color rgba(gray, 0.5)
+    border-width 0 0 2px 2px
+
+.plx-layer
+  transform-style preserve-3d
+  display table
+  width 100%
+  height 100%
+  position absolute
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  color white
+
+  &.-fore
+    transform: translateZ(-150px) scale(1.5)
+  &.-back
+    transform: translateZ(-300px) scale(2)
+  &.-deep
+    transform: translateZ(-600px) scale(3)
+  &.-spacer
+    color black
+    background-color white
+    position relative
+    z-index 100
+    transform translate3d(0,0,0)
+
+.plx-layer-content
+  display table-cell
+  vertical-align middle
+  text-align center
