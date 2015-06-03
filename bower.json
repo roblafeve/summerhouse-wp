@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "Stickyfill": "~1.1.2"
+    "Stickyfill": "~1.1.2",
+    "jquery.scrollTo": "~2.1.0"
   }
 }

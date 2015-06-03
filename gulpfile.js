@@ -24,8 +24,6 @@ gulp.task('stylus', function(){
 
 gulp.task('server', function() {
   browserSync.init({
-    //browsersync with a php server
-    proxy: "localhost/summer-house/",
     notify: false
   });
   gulp.watch('themes/summer-house/styles/**/*.styl', ['stylus']);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" <?php body_class(); ?>>
   <head>
     <?php wp_head(); ?> 
     <meta charset="UTF-8"/>
@@ -10,3 +10,7 @@
   <body>
 
     <?php get_template_part('titlebar') ?>
+
+    <?php if(!is_front_page()): ?>
+    <div class="content">
+    <?php endif; ?>

@@ -4,6 +4,8 @@
 
 function sh_scripts() {
   wp_enqueue_style( 'sh_styles', get_template_directory_uri() . '/styles/styles.css' );
+  wp_enqueue_script( 'sh_functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ) );
+  wp_enqueue_script( 'sh_scrollTo', content_url() . '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js', array( 'jquery' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'sh_scripts' );
@@ -117,6 +119,31 @@ function sh_posts($type = null) {
     
   }
 
+}
+
+
+function sh_about() {
+  $args = array(
+    'pagename' => 'about',
+  );
+  $query = new WP_Query($args);
+  while ($query->have_posts() ) : $query->the_post();
+    get_template_part('about');
+  endwhile;
+  wp_reset_postdata();
+  wp_reset_query();
+}
+
+function sh_contact() {
+  $args = array(
+    'pagename' => 'contact',
+  );
+  $query = new WP_Query($args);
+  while ($query->have_posts() ) : $query->the_post();
+    get_template_part('contact');
+  endwhile;
+  wp_reset_postdata();
+  wp_reset_query();
 }
 
 

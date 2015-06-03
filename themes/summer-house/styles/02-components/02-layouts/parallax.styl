@@ -1,12 +1,3 @@
-html
-  font 87.5%/1.4 'Helvetica Neue', Arial, sans-serif
-  overflow hidden
-  height 100%
-  
-body
-  margin 0
-  height 100%
-
 .plx
   height 100%
   width 100%
@@ -55,11 +46,11 @@ body
   &.-deep
     transform: translateZ(-600px) scale(3)
   &.-spacer
+    transform-style none
     color black
     background-color white
     position relative
     z-index 100
-    transform translate3d(0,0,0)
 
 .plx-layer-content
   display table-cell

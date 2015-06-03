@@ -1131,6 +1131,19 @@ body {
 .config {
   color: #f00;
 }
+a {
+  color: inherit;
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+.home body {
+  overflow: hidden;
+}
+*:not(.home) body {
+  padding-top: 5em;
+}
 h1 {
   letter-spacing: 0.5em;
 }
@@ -1155,8 +1168,17 @@ h5,
 h6 {
   font-weight: normal;
 }
+html {
+  font: 87.5%/1.4 'Helvetica Neue', Arial, sans-serif;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 .content {
-  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 84em;
   width: 100%;
 }
@@ -1188,6 +1210,8 @@ h6 {
 }
 .post-image {
   background: #f5f5f5;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .post-image:before {
   content: '';
@@ -1203,27 +1227,23 @@ h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  font-weight: 500;
 }
 .titlebar-logo img {
   height: 2.5em;
   display: block;
 }
+.titlebar-nav {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+}
 .titlebar-nav ul {
-  font-size: 75%;
+  font-size: 70%;
   list-style: none;
   padding: 0;
 }
-html {
-  font: 87.5%/1.4 'Helvetica Neue', Arial, sans-serif;
-  overflow: hidden;
-  height: 100%;
-}
-body {
-  margin: 0;
-  height: 100%;
+.titlebar-nav a {
+  text-decoration: none;
 }
 .plx {
   height: 100%;
@@ -1286,12 +1306,12 @@ body {
           transform: translateZ(-600px) scale(3);
 }
 .plx-layer.-spacer {
+  -webkit-transform-style: none;
+          transform-style: none;
   color: #000;
   background-color: #fff;
   position: relative;
   z-index: 100;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 .plx-layer-content {
   display: table-cell;

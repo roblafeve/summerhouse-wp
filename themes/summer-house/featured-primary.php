@@ -1,4 +1,4 @@
-<div class="plx-layers">
+<div id="primary" class="plx-layers">
   <div style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large')[0];?>')" class="plx-layer -back"></div>
   <div class="plx-layer -fore">
     <div class="plx-layer-content"> 

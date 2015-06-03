@@ -8,14 +8,10 @@
 </div>
 <div class="plx-layer -spacer">
   <div class="plx-layer-content">
-    <div class="content -align-left">
-      <div class="grid -fixed">
-        <div class="col"></div>
-        <div class="col nest-3">
-          <?php the_excerpt(); ?>
-          <a href="<?php the_permalink(); ?>">Read on</a>
-        </div>
-      </div>
+    <div class="content -align-left nest-3 sub-all">
+
+      <?php the_content(); ?>
+
     </div>
   </div>
 </div>
