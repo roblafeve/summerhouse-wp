@@ -1,47 +1,37 @@
 <?php get_header(); ?>
 
-<h1>blog</h1>
-<?php sh_posts(); ?>
+<h1>Blog</h1>
 
-<div class="articles -multiColumn">
-  <div class="section">
-    <div class="section-content">
-      <div class="grid spaced align-top">
-        <div class="grid-items">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-      </div>
-    </div>
+<div class="posts -singleColumn">
+  <?php sh_posts(); ?>
+</div>
+
+<div class="posts -multiColumn">
+  <div class="grid -fixed -spaced -align-top">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
   
-    var cols = document.querySelectorAll('.articles.-multiColumn .col');
-    var colsLength = cols.length;
-    var articles = document.querySelectorAll('.articles.-singleColumn .article');
-    var articlesLength = articles.length;
+    var columns = document.querySelectorAll('.posts.-multiColumn .col');
+    var posts = document.querySelectorAll('.posts.-singleColumn .post');
+
     var c = 0;
-    for (var i = 0; i < articlesLength; i++) {
-      article = articles[i];  
-      article = article.cloneNode(true);
-      cols[c].appendChild(article);
+    for (var i = 0; i < posts.length; i++) {
+      post = posts[i];  
+      post = post.cloneNode(true);
+      columns[c].appendChild(post);
       c++;
-      if(c >= colsLength) {
+      if(c >= columns.length) {
         c = 0;
       }
     }
-  
-    var stickyElements = document.getElementsByClassName('sticky');
-    for (var i = stickyElements.length - 1; i >= 0; i--) {
-        Stickyfill.add(stickyElements[i]);
-    }
-  
+
   });
-  
 </script>
 
 <?php get_footer(); ?>

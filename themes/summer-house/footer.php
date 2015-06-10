@@ -1,4 +1,4 @@
-  <?php if(!is_front_page()): ?>
+  <?php if(!is_front_page() && !is_single()): ?>
   </div>
   <?php endif; ?>
   <?php if(get_site_url() !== "http://summerhousefilms.com" && get_site_url() !== "http://dev.summerhousefilms.com") : ?>

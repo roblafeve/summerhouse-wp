@@ -11,6 +11,6 @@
 
     <?php get_template_part('titlebar') ?>
 
-    <?php if(!is_front_page()): ?>
+    <?php if(!is_front_page() && !is_single()): ?>
     <div class="content">
     <?php endif; ?>
