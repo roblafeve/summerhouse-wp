@@ -1218,9 +1218,11 @@ body {
   margin: 0;
   height: 100%;
 }
-.home body,
-.single body {
-  overflow: hidden;
+@media (min-width: 640px) {
+  .home body,
+  .single body {
+    overflow: hidden;
+  }
 }
 *:not(.home) body {
   padding-top: 5em;
@@ -1334,9 +1336,13 @@ img {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
   -webkit-perspective: 300px;
           perspective: 300px;
+}
+@media (min-width: 640px) {
+  .plx {
+    overflow-y: scroll;
+  }
 }
 .plx-layers {
   width: 100%;
@@ -1391,8 +1397,8 @@ img {
           transform: translateZ(-600px) scale(3);
 }
 .plx-layer.-spacer {
-  -webkit-transform-style: none;
-          transform-style: none;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   color: #000;
   background-color: #fff;
   position: relative;

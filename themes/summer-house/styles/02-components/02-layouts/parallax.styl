@@ -2,8 +2,9 @@
   height 100%
   width 100%
   overflow-x hidden
-  overflow-y scroll
   perspective 300px
+  @media (min-width: 640px)
+    overflow-y scroll
 
 .plx-layers
   width 100%
@@ -46,7 +47,7 @@
   &.-deep
     transform: translateZ(-600px) scale(3)
   &.-spacer
-    transform-style none
+    transform translate3d(0,0,0)
     color black
     background-color white
     position relative

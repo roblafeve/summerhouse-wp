@@ -19,8 +19,6 @@
 
         <?php the_content(); ?>
 
-        <h3><a href="<?php the_permalink(); ?>">View full post</a></h3>
-
       </div>
     </div>
   </div>

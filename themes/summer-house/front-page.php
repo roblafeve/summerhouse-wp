@@ -12,15 +12,22 @@
   <div id="work" class="plx-layer -spacer">
     <div class="plx-layer-content">
       <div class="content -align-left">
-        <h2>Our Work</h2>
-        <div class="content-grid">
-          <div class="grid -wrapped">
-            <?php sh_posts('featured-work') ?>
-          </div>
+        
+        <h2>Work</h2>
+
+        <div class="posts -singleColumn">
+          <?php sh_posts('featured-work'); ?>
         </div>
+
+        <div class="posts -multiColumn">
+          <div class="grid -fixed -spaced -align-top"></div>
+        </div>
+
       </div>
     </div>
   </div>
+
+
 
 
   <!-- Featured - Secondary -->
