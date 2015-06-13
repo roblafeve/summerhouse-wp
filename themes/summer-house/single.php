@@ -17,6 +17,7 @@
     <div class="plx-layer-content">
       <div class="content -narrow -align-left nest-3 sub-all">
 
+        <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
 
       </div>

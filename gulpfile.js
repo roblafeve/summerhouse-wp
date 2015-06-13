@@ -12,7 +12,8 @@ var gulp         = require('gulp'),
 gulp.task('stylus', function(){
   return gulp.src('themes/summer-house/styles/index.styl')
     .pipe(stylus({
-      include: ['node_modules']
+      include: ['node_modules'],
+      compress: true
     }))
     .pipe(concat('styles.css'))
     .pipe(autoprefixer())
