@@ -12,6 +12,7 @@
   <div class="plx-layer-content">
     <div class="content -narrow -align-left nest-3 sub-all">
 
+      <h2><?php the_title(); ?></h2>
       <?php the_excerpt(); ?>
 
       <h3><a href="<?php the_permalink(); ?>">View full post</a></h3>
