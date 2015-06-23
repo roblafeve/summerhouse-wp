@@ -159,4 +159,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 add_filter( 'jpeg_quality', create_function( '', 'return 90;' ) );
 
 
+// Remove Gallery Styles
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+
 ?>

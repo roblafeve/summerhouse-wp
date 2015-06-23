@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
     window.matchMedia("(max-width: 640px)")
   ];
 
-  for (var i=0; i<mqls.length; i++){ // loop through queries
+  for (var i = 0; i < mqls.length; i++){ // loop through queries
     mediaqueryresponse(mqls[i]) // call handler function explicitly at run time
     mqls[i].addListener(mediaqueryresponse) // call handler function whenever the media query is triggered
   }

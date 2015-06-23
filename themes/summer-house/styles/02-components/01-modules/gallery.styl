@@ -1,0 +1,26 @@
+.gallery
+  width 100%
+  columns 4 auto
+  column-gap 0.756rem
+  @extend .nest-5, .pad-5
+  @media (max-width: 1400px)
+    columns 3 auto
+  @media (max-width: 960px)
+    columns 2 auto
+  @media (max-width: 640px)
+    columns 1 auto
+    margin-top 0
+
+  br
+    display none
+
+.gallery-item
+  width 100%
+  display block
+  a
+    display block
+  img
+    border none
+    display block
+    width 100%
+    height auto

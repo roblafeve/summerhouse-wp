@@ -21,6 +21,7 @@
         <?php the_content(); ?>
 
       </div>
+      <?php echo do_shortcode('[gallery size="medium" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?> 
     </div>
   </div>
 
