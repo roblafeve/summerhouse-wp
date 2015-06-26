@@ -2,7 +2,6 @@
   width 100%
   columns 2 auto
   column-gap 0.756rem
-  @extend .nest-5
   @media (max-width: 960px)
     columns 1 auto
     margin-top 0
@@ -13,6 +12,8 @@
 .gallery-item
   width 100%
   display table
+  break-inside avoid
+  @extend .pad-b-5
   a
     display block
   img
