@@ -3,27 +3,27 @@ jQuery(document).ready(function($) {
 
   function stackPosts(colCount) {
 
-    
-    var 
+
+    var
       columns = [],
       c = 0,
       posts = document.querySelectorAll('.posts.-singleColumn .post'),
       grid  = document.querySelectorAll('.posts.-multiColumn > .grid')[0];
       console.log(posts);
-      
+
     grid.innerHTML = '';
 
-    
+
     for (var i = 0; i < colCount; i++) {
       var col = document.createElement("div");
       col.classList.add('col');
       grid.appendChild(col);
     }
-    
+
     columns = document.querySelectorAll('.posts.-multiColumn .col');
 
     for (var i = 0; i < posts.length; i++) {
-      post = posts[i];  
+      post = posts[i];
       post = post.cloneNode(true);
       columns[c].appendChild(post);
       c++;
@@ -38,8 +38,8 @@ jQuery(document).ready(function($) {
 
     [].forEach.call(document.querySelectorAll('.titlebar a'), function (el) {
 
-      var url  = el.getAttribute('href'), 
-          hash = url.substring(url.indexOf('#')), 
+      var url  = el.getAttribute('href'),
+          hash = url.substring(url.indexOf('#')),
           $dest;
 
       if(el.hash) {
@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     });
 
   }
-  
+
 
   scrollsaw();
 
@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
     mediaqueryresponse(mqls[i]) // call handler function explicitly at run time
     mqls[i].addListener(mediaqueryresponse) // call handler function whenever the media query is triggered
   }
-
+  stackPosts(4);
   function mediaqueryresponse(mql){
     if (mqls[0].matches){ // do something when width: 1024px media query matches
       stackPosts(4);

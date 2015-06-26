@@ -156,12 +156,12 @@ function sh_contact() {
 
 if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
-  add_image_size( 'small', 500, 500 );
+  add_image_size( 'small', 650, 650 );
   add_image_size( 'medium', 960, 960 );
   add_image_size( 'large', 1500, 1500 );
 }
 
-add_filter( 'jpeg_quality', create_function( '', 'return 90;' ) );
+add_filter( 'jpeg_quality', create_function( '', 'return 85;' ) );
 
 
 // Remove Gallery Styles
