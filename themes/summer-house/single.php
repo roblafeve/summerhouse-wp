@@ -6,12 +6,14 @@
     <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large')[0];?>" alt="" />
   </div>
   <div class="article-body">
-    <div class="grid">
+    <div class="grid -spaced">
       <div class="col">
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+        <div class="article-body-main">
+          <h2><?php the_title(); ?></h2>
+          <?php the_content(); ?>
+        </div>
       </div>
-      <div class="col">
+      <div class="col article-body-share">
         <p>
           share
         </p>
