@@ -15,8 +15,8 @@ add_action( 'wp_enqueue_scripts', 'sh_scripts' );
 
 function insert_featured_primary_cat() {
   wp_insert_term(
-    "Featured - Primary", 
-    "category", 
+    "Featured - Primary",
+    "category",
     array(
       'description' => "Displays post at the top of the homepage (limit of 1)",
     )
@@ -28,8 +28,8 @@ add_action( 'init', 'insert_featured_primary_cat' );
 
 function insert_featured_secondary_cat() {
   wp_insert_term(
-    "Featured - Secondary", 
-    "category", 
+    "Featured - Secondary",
+    "category",
     array(
       'description' => "Displays post on homepage below work (No limit. Use 'Order' field to adjust the display order.)",
     )
@@ -41,8 +41,8 @@ add_action( 'init', 'insert_featured_secondary_cat' );
 
 function insert_featured_work_cat() {
   wp_insert_term(
-    "Featured - Work", 
-    "category", 
+    "Featured - Work",
+    "category",
     array(
       'description' => "Displays post in work section on homepage (Limit of 8. User 'Order' field to adjust display order.)",
     )
@@ -83,7 +83,7 @@ function sh_posts($type = null) {
 
     case 'featured-secondary':
       $args = array(
-        'category_name' => 'featured-secondary', 
+        'category_name' => 'featured-secondary',
         'orderby' => 'menu_order',
         'order' => 'ASC',
         'posts_per_page' => -1,
@@ -116,11 +116,13 @@ function sh_posts($type = null) {
         get_template_part('listing');
       endwhile; endif;
       break;
-    
+
   }
 
 }
 
+
+// About Page Loop
 
 function sh_about() {
   $args = array(
@@ -133,6 +135,9 @@ function sh_about() {
   wp_reset_postdata();
   wp_reset_query();
 }
+
+
+// Contact Page Loop
 
 function sh_contact() {
   $args = array(
@@ -149,7 +154,7 @@ function sh_contact() {
 
 // Add Post Thumbnails
 
-if ( function_exists( 'add_theme_support' ) ) { 
+if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'small', 500, 500 );
   add_image_size( 'medium', 960, 960 );
