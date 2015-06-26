@@ -20,9 +20,22 @@
       </div>
     </div>
   </div>
+  <?php if(get_post_meta(get_the_ID(), 'video')): ?>
+  <div class="article-video">
+    <iframe src="https://player.vimeo.com/video/<?php echo get_post_meta( get_the_ID(), 'video', true ); ?>?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+  <?php endif; ?>
+  <?php
+  $attachments = get_children( array(
+    'post_type' => 'attachment',
+    'post_mime_type' => 'image',
+    'post_parent' => $post->ID
+    ));
+  if(count($attachments) > 1) : ?>
   <div class="article-gallery">
     <?php echo do_shortcode('[gallery size="small" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
   </div>
+  <?php endif; ?>
 </div>
 
 <?php endwhile; endif; ?>
