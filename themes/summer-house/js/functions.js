@@ -59,8 +59,9 @@ jQuery(document).ready(function($) {
   scrollsaw();
 
   var mqls = [
-    window.matchMedia("(max-width: 1400px)"),
-    window.matchMedia("(max-width: 960px)"),
+    window.matchMedia("(min-width: 1024px)"),
+    window.matchMedia("(max-width: 1024px)"),
+    window.matchMedia("(max-width: 768px)"),
     window.matchMedia("(max-width: 640px)")
   ];
 
@@ -68,7 +69,7 @@ jQuery(document).ready(function($) {
     mediaqueryresponse(mqls[i]) // call handler function explicitly at run time
     mqls[i].addListener(mediaqueryresponse) // call handler function whenever the media query is triggered
   }
-  stackPosts(4);
+
   function mediaqueryresponse(mql){
     if (mqls[0].matches){ // do something when width: 1024px media query matches
       stackPosts(4);
@@ -77,6 +78,9 @@ jQuery(document).ready(function($) {
       stackPosts(3);
     }
     if (mqls[2].matches){ // do something when height: 640px media query matches
+      stackPosts(2);
+    }
+    if (mqls[3].matches){
       stackPosts(1);
     }
   }
