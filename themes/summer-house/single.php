@@ -6,7 +6,7 @@
     <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sh_large')[0];?>" alt="" />
   </div>
   <div class="article-body">
-    <div class="grid -spaced">
+    <div class="grid -spaced -break-max-small">
       <div class="col">
         <div class="article-body-main">
           <h2><?php the_title(); ?></h2>
@@ -14,9 +14,9 @@
         </div>
       </div>
       <div class="col article-body-share">
-        <p>
-          share
-        </p>
+        <h6>Share with</h6>
+        <a class="shareLink" href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo urlencode(the_permalink()); ?>&via=twitter&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+        <a class="shareLink" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>">Facebook</a>
       </div>
     </div>
   </div>

@@ -13,11 +13,23 @@
 
 .article-body
   @extend .nest-2
+  > .grid
+    @extend .nest-2
 
 .article-body-main
   @extend .nest-4
   max-width 45em
   text-align justify
+
+.article-body-share
+  text-align right
+  white-space nowrap
+  @extend .nest-6
+  @media (max-width: 800px)
+    text-align left
+    .shareLink
+      display inline-block
+      margin-right 0.5em
 
 .article-video
   width 100%
