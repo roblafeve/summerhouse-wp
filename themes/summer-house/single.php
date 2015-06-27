@@ -33,7 +33,7 @@
     ));
   if(count($attachments) > 1) : ?>
   <div class="article-gallery">
-    <?php echo do_shortcode('[gallery size="small" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
+    <?php echo do_shortcode('[gallery size="medium" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
   </div>
   <?php endif; ?>
 </div>

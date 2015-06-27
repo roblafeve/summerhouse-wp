@@ -9,7 +9,6 @@ jQuery(document).ready(function($) {
       c = 0,
       posts = document.querySelectorAll('.posts.-singleColumn .post'),
       grid  = document.querySelectorAll('.posts.-multiColumn > .grid')[0];
-      console.log(posts);
 
     grid.innerHTML = '';
 
