@@ -2,8 +2,8 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div class="article">
-  <div class="article-header" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large')[0];?>')">
-    <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large')[0];?>" alt="" />
+  <div class="article-header" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sh_large')[0];?>')">
+    <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sh_large')[0];?>" alt="" />
   </div>
   <div class="article-body">
     <div class="grid -spaced">
@@ -33,7 +33,7 @@
     ));
   if(count($attachments) > 1) : ?>
   <div class="article-gallery">
-    <?php echo do_shortcode('[gallery size="medium" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
+    <?php echo do_shortcode('[gallery size="sh_medium" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
   </div>
   <?php endif; ?>
 </div>
