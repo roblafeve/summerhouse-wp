@@ -10,14 +10,14 @@ var gulp         = require('gulp'),
 // Stylus
 
 gulp.task('stylus', function(){
-  return gulp.src('themes/summer-house/styles/index.styl')
+  return gulp.src('styles/index.styl')
     .pipe(stylus({
       include: ['node_modules'],
       compress: true
     }))
     .pipe(concat('styles.css'))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('themes/summer-house/styles/'))
+    .pipe(gulp.dest('styles/'))
     .pipe(reload({stream: true}));
 });
 
@@ -27,8 +27,8 @@ gulp.task('server', function() {
   browserSync.init({
     notify: false
   });
-  gulp.watch('themes/summer-house/styles/**/*.styl', ['stylus']);
-  gulp.watch('themes/summer-house/**/*.php').on('change', reload);
+  gulp.watch('styles/**/*.styl', ['stylus']);
+  gulp.watch('**/*.php').on('change', reload);
 });
 
 
