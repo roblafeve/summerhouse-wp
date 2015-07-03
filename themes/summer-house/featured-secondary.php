@@ -10,12 +10,16 @@
 </div>
 <div class="plx-layer -spacer">
   <div class="plx-layer-content">
-    <div class="content -narrow -align-left nest-3 sub-all">
+    <div class="featured-secondary-gallery">
+      <?php echo do_shortcode('[gallery size="sh_medium" limit="3" link="none" exclude="' . get_post_thumbnail_id( $post->ID ) . '"]'); ?>
+    </div>
+    <div class="content -narrow -align-left nest-3">
 
       <h2><?php the_title(); ?></h2>
       <?php the_excerpt(); ?>
 
       <h3><a href="<?php the_permalink(); ?>">View full post</a></h3>
+
 
     </div>
   </div>
