@@ -1,0 +1,52 @@
+.article
+  max-width 100em
+  margin 0 auto
+  @extend .nest-3
+
+.article-header
+  height 75vh
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  img
+    display none
+
+.article-body
+  @extend .nest-2
+  > .grid
+    @extend .nest-2
+
+.article-body-main
+  @extend .nest-4
+  max-width 45em
+  text-align justify
+
+.article-body-share
+  text-align right
+  white-space nowrap
+  @extend .nest-6
+  @media (max-width: 800px)
+    text-align left
+    .shareLink
+      display inline-block
+      margin-right 0.5em
+
+.article-video
+  width 100%
+  position relative
+  &:before
+    content ''
+    display block
+    padding-top (9/16)*100%
+
+  iframe
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    width 100%
+    height 100%
+
+.article-gallery
+  null

@@ -1,0 +1,25 @@
+.gallery
+  width 100%
+  columns 3 auto
+  column-gap 0.756rem
+  margin-bottom -0.756rem
+  @media (max-width: 1024px)
+    columns 2 auto
+  @media (max-width: 640px)
+    columns 1 auto
+
+  br
+    display none
+
+.gallery-item
+  width 100%
+  display table
+  break-inside avoid
+  @extend .pad-b-5
+  a
+    display block
+  img
+    border none
+    display block
+    width 100%
+    height auto
