@@ -3,7 +3,8 @@
   <head>
     <?php wp_head(); ?>
     <meta charset="UTF-8"/>
-    <title>Summer House <?php echo the_title(); ?></title>
+    <title>Summer House</title>
+    <meta property="fb:app_id" content="1623024351307828" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"/>
     <link rel="stylesheet" href="styles/style.css"/>
   </head>
